@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cards-container{
+    @apply p-5 flex bg-white gap-9 w-[37rem] h-[12rem] rounded-md hover:-mt-2 shadow duration-500 hover:bg-gradient-to-br from-blue-800 via-blue-500 to-blue-100 hover:text-white cursor-pointer
+  }
+  .cards-container:hover .react-icon{
+    transition: all 0.3s ease;
+    color: white;
+  }
