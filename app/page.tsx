@@ -1,5 +1,8 @@
 import Image from "next/image";
 
 export default function Home() {
-  return <div>Hello oumaima</div>;
+  return 
+  (
+  <div className="bg-[url('/tech.jpg')] h-screen "></div>
+  )
 }
