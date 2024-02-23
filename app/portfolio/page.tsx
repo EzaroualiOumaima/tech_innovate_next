@@ -55,8 +55,6 @@ const PortfolioPage = () => {
          
         </div>
       </section>
-
-
     </div>
   );
 };
