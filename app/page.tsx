@@ -1,22 +1,42 @@
-import tech from "./assests/tech.jpg";
-import Image from "next/image";
+"use client";
+
+import { useEffect } from "react";
+import tech from "../public/assets/home.jpg";
+import AboutPage from "./_components/AboutPage";
+import ServicePage from "./_components/ServicePage";
+import TeamPage from "./_components/TeamPage";
+import PortfolioPage from "./_components/Portfolio";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+      offset: 100,
+    });
+  }, []);
   return (
-    <div className="pt-16">
-      <div className="flex items-center justify-center gap-9 pt-10 ">
-        <div className="w-4/12 border">
-          <Image
-            src={tech}
-            alt="tech"
-            className="w-[600px] h-[500px] rounded-xl"
-          />
-        </div>
-        <div className="w-[37%]">
-          <h1 className="text-blue-700 text-center  text-5xl italic my-6 mb-12 font-bold  ">
+    <>
+      <div
+        className="flex items-center pl-20 w-full h-screen bg-cover mb-32"
+        style={{ backgroundImage: `url(${tech.src})` }}
+      >
+        <div className="flex flex-col gap-7">
+          <h1
+            className="bg-gradient-to-r from-blue-600 via-white to-white bg-clip-text text-transparent text-left text-5xl italic mb-14 font-bold"
+            data-aos="fade-right"
+          >
             Welcome to Tech Innovate
           </h1>
-          <p className="text-xl font-bold leading-10 ">
+          <p
+            className="text-xl leading-10 text-white w-[40%]"
+            data-aos="fade-right"
+            data-aos-delay="250"
+          >
             Experience technological excellence with Tech Innovate. We are a
             passionate team dedicated to transforming ideas into innovative
             digital solutions. Explore our services, meet our team, and let us
@@ -24,7 +44,13 @@ function Home() {
           </p>
         </div>
       </div>
-    </div>
+
+      <AboutPage />
+      <ServicePage />
+      <PortfolioPage />
+      <TeamPage />
+    </>
   );
 }
+
 export default Home;

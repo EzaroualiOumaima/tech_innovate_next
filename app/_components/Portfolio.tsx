@@ -37,8 +37,10 @@ const PortfolioPage = () => {
   return (
     <div>
       <section className="flex flex-col items-center justify-center gap-16 mb-10 h-screen pt-44">
-        <div className="flex flex-col text-center gap-5 ">
-          <h1 className="text-xl text-blue-600">Our Projects</h1>
+        <div className="flex flex-col items-center justify-center gap-5 ">
+          <h1 className="text-xl bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent w-fit">
+            Our Projects
+          </h1>
           <p
             className="text-4xl font-bold"
             data-aos="fade-up"
@@ -47,7 +49,7 @@ const PortfolioPage = () => {
             Some of our Recent Works
           </p>
           <p
-            className="text-xl text-[#717173] italic"
+            className="text-xl text-[#717173] italic text-center"
             data-aos="fade-up"
             data-aos-delay="500"
           >

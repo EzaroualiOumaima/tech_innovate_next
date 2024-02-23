@@ -2,10 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-.cards-container{
-    @apply p-5 flex bg-white gap-9 w-[37rem] h-[12rem] rounded-md hover:-mt-2 shadow duration-500 hover:bg-gradient-to-br from-blue-800 via-blue-500 to-blue-100 hover:text-white cursor-pointer
+.cards-container {
+  @apply p-5 flex bg-white gap-9 w-[37rem] h-[12rem] rounded-md hover:-mt-2 shadow duration-500 hover:bg-gradient-to-br from-blue-800 via-blue-500 to-blue-100 hover:text-white cursor-pointer;
+}
+.cards-container:hover .react-icon {
+  transition: all 0.3s ease;
+  color: white;
+}
+
+
+.person-info-card:hover .description {
+  display: block;
+}
+
+
+@keyframes showup {
+  from {
+    opacity: 0;
   }
-  .cards-container:hover .react-icon{
-    transition: all 0.3s ease;
-    color: white;
+  to {
+    opacity: 1;
   }
+}
+
+
+.contact-input {
+  @apply border border-[#bfbcbc92] px-5 h-14 outline-[#6561e1b6] rounded;
+}
+
+.Contact-Cards {
+  @apply p-5 flex bg-white gap-9 w-[24rem] h-[12rem] rounded-md hover:-mt-2 shadow duration-500 hover:bg-gradient-to-br from-blue-700 via-blue-400 to-blue-200 hover:text-white cursor-pointer;
+}
+
+.Contact-Cards:hover .react-icon {
+  transition: all 0.3s ease;
+  color: white;
+}

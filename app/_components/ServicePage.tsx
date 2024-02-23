@@ -10,8 +10,10 @@ function Page() {
   return (
     <>
       <section className="flex flex-col items-center justify-center gap-16 mb-10 h-screen pt-44">
-        <div className="flex flex-col text-center gap-5 ">
-          <h1 className="text-xl text-blue-600">What we can do for you</h1>
+        <div className="flex flex-col items-center justify-center gap-5 ">
+          <h1 className="text-xl bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent w-fit">
+            What we can do for you
+          </h1>
           <p
             className="text-4xl font-bold"
             data-aos="fade-up"
